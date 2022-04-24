@@ -3,3 +3,8 @@
   width: 120px;
   height: auto;
 }
+@media screen and (max-width: 320px) {
+  .info-user__imag {
+    margin: 0 auto;
+}
+}

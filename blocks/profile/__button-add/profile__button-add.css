@@ -16,3 +16,8 @@
   transition: opacity .9s ease-out;
   opacity: .6;
 }
+@media screen and (max-width: 320px) {
+  .profile__button-add {
+    width: 100%;
+}
+}
