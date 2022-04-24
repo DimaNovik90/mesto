@@ -1,0 +1,18 @@
+.profile__button-add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+	color: inherit;
+	border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 2px;
+	padding: 14px 64px;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+.profile__button-add:hover {
+  transition: opacity .9s ease-out;
+  opacity: .6;
+}

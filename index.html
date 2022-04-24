@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Document</title>
+  </head>
+  <body class="page">
+    <header class="header">
+      <a href="" class="header__logo"> </a>
+    </header>
+    <main class="content">
+      <section class="profile">
+        <div class="info-user">
+          <img class="info-user__imag" src="./images/foto-kusto.png" alt="" />
+          <div class="info-user__container">
+            <h1 class="info-user__name">
+              Жак-Ив Кусто
+              <button class="info-user__name-button">
+                <svg
+                  width="10"
+                  height="10"
+                  viewBox="0 0 10 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 1.32827L2.60377 8.7666L1.28302 7.41936L8.66038 0L10 1.32827ZM0 10L1.96226 9.41177L0.584906 8.08349L0 10Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </h1>
+            <p class="info-user__discription">Исследователь океана</p>
+          </div>
+        </div>
+        <button class="profile__button-add">
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 22 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22 9.77778H12.2222V0H9.77778V9.77778H0V12.2222H9.77778V22H12.2222V12.2222H22V9.77778Z"
+              fill="white"
+            />
+          </svg>
+        </button>
+      </section>
+      <section class="items-foto">
+        <div class="card">
+          <img src="./images/kirill-pershin-1088404-unsplash (1).png" alt="" class="card__imag">
+          <div class="card__name">
+            <h2 class="card__name-title">Карачаевск</h2>
+            <button src="" alt="" class="card__name-heart">
+
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/kirill-pershin-1404681-unsplash (1).png" alt="" class="card__imag">
+          <div class="card__name">
+            <h2 class="card__name-title">Гора Эльбрус</h2>
+            <button src="" alt="" class="card__name-heart">
+
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/kirill-pershin-1556355-unsplash (1).png" alt="" class="card__imag">
+          <div class="card__name">
+            <h2 class="card__name-title">Домбай</h2>
+            <button src="" alt="" class="card__name-heart">
+
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/kirill-pershin-1404681-unsplash (1).png" alt="" class="card__imag">
+          <div class="card__name">
+            <h2 class="card__name-title">Гора Эльбрус</h2>
+            <button src="" alt="" class="card__name-heart">
+
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/kirill-pershin-1556355-unsplash (1).png" alt="" class="card__imag">
+          <div class="card__name">
+            <h2 class="card__name-title">Домбай</h2>
+            <button alt="" class="card__name-heart">
+
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/kirill-pershin-1088404-unsplash (1).png" alt="" class="card__imag">
+          <div class="card__name">
+            <h2 class="card__name-title"> Карачаево-Черкессия</h2>
+            <button src="" alt="" class="card__name-heart">
+
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright">
+        &#169; 2020 Mesto Russia
+      </p>
+    </footer>
+    <div class="popup">
+      <div class="popup__container">
+        <button class="popup__container-close">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 28.8L19.2 16L32 3.2L28.8 0L16 12.8L3.2 0L0 3.2L12.8 16L0 28.8L3.2 32L16 19.2L28.8 32L32 28.8Z" fill="white"/>
+          </svg>
+        </button>
+        <form class="popup-form" action="">
+          <p class="popup-form__title">Редактировать профиль</p>
+          <input class="popup-form__name" type="text" value="Жак-Ив Кусто" name="" id="">
+          <input class="popup-form__discription" value="Исследователь океана" type="text">
+          <button class="popup-form__save-btn" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <script src="./blocks/scripts/script.js"></script>
+  </body>
+</html>
