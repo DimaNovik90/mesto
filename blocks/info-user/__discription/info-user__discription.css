@@ -6,7 +6,7 @@
   color: #fff;
   padding-top: 16px;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 400px) {
   .info-user__discription {
     font-size: 14px;
     line-height: 17px;
