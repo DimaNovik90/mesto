@@ -11,6 +11,12 @@
 }
 @media screen and (min-width: 501px) and (max-width: 897px) {
   .content {
-    padding: 0 9px;
+    padding: 0 10px;
   }
 }
+@media screen and (min-width: 601px) and (max-width: 670px) {
+  .content {
+    padding: 0 15px;
+  }
+}
+
