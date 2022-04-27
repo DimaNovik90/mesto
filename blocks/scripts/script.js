@@ -1,5 +1,5 @@
 const btnClose = document.querySelector('.popup__container-close');
-const btnEdit = document.querySelector('.info-user__name-button');
+const btnEdit = document.querySelector('.container__name-button');
 const bodyWindow = document.querySelector('.page');
 const popupWrraper = document.querySelector('.popup');
 
@@ -19,3 +19,23 @@ function popupOverleyclick(evt) {
 }
 popupWrraper.addEventListener('click', popupOverleyclick);
 
+
+
+// доступ к форме
+const namePopupinput = document.querySelector('.popup-form__name');
+const namePopupDiscription = document.querySelector('.popup-form__discription');
+const btnSave = document.querySelector('.popup-form__save-btn');
+const form = document.querySelector('.popup-form');
+
+// доступ к HTML
+const userNamepage = document.querySelector('.container__name-title');
+const discriptionNamepage = document.querySelector('.info-user__discription');
+
+
+function formSubmitHandler (evt) {
+  evt.preventDefault();
+  userNamepage.textContent = namePopupinput.value
+  discriptionNamepage.textContent = namePopupDiscription.value;
+  popupOpenToggle()
+}
+form.addEventListener('submit', formSubmitHandler);
