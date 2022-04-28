@@ -1,6 +1,7 @@
 .info-user__imag {
   border-radius: 50%;
   width: 120px;
-  height: auto;
+  height: 120px;
+  object-fit: cover;
 }
 

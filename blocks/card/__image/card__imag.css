@@ -1,5 +1,5 @@
 .card__imag {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 282px;
   object-fit: cover;
 }

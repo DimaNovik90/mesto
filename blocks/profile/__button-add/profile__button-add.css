@@ -17,7 +17,12 @@
   transition: opacity .9s ease-out;
   opacity: .6;
 }
-@media screen and (min-width: 320px) and (max-width: 600px) {
+@media screen and (min-width: 400px) and (max-width: 610px) {
+  .profile__button-add {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 400px) {
   .profile__button-add {
     width: 100%;
   }
@@ -26,5 +31,11 @@
   .profile__button-add {
     margin: 0 auto;
     width: 50%;
+  }
+}
+@media screen and (min-width: 671px) and (max-width: 700px) {
+  .profile__button-add {
+    width: 70%;
+    margin: 20px auto;
   }
 }

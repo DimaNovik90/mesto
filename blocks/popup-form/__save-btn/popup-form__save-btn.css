@@ -12,6 +12,7 @@
   margin: 48px 0 37px 0;
   cursor: pointer;
   border-radius: 2px;
+  width: 100%;
 }
 .popup-form__save-btn:hover {
   background-color: rgba(0, 0, 0, 0.8);

@@ -1,5 +1,5 @@
 const btnClose = document.querySelector('.popup__container-close');
-const btnEdit = document.querySelector('.container__name-button');
+const btnEdit = document.querySelector('.container-name__button');
 const bodyWindow = document.querySelector('.page');
 const popupWrraper = document.querySelector('.popup');
 
@@ -28,7 +28,7 @@ const btnSave = document.querySelector('.popup-form__save-btn');
 const form = document.querySelector('.popup-form');
 
 // доступ к HTML
-const userNamepage = document.querySelector('.container__name-title');
+const userNamepage = document.querySelector('.container-name__title');
 const discriptionNamepage = document.querySelector('.info-user__discription');
 
 

@@ -5,3 +5,13 @@
   row-gap: 20px;
   column-gap: 17px;
 }
+@media screen and (min-width: 400px) and (max-width: 610px) {
+  .items-foto {
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 897px) {
+  .items-foto {
+    grid-template-columns: repeat(auto-fit, minmax(215px, 1fr))
+  }
+}
