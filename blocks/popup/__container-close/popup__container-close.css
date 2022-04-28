@@ -24,3 +24,13 @@
     left: 262px;
   }
 }
+@media screen and (min-width: 401px) and (max-width: 432px) {
+  .popup__container-close {
+    left: 347px;
+  }
+}
+@media screen and (min-width: 433px) and (max-width: 520px) {
+  .popup__container-close {
+    left: 382px;
+  }
+}
