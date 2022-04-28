@@ -5,6 +5,11 @@
   row-gap: 20px;
   column-gap: 17px;
 }
+@media screen and (min-width: 320px) and (max-width: 399px) {
+  .items-foto {
+    padding: 0 19px;
+  }
+}
 @media screen and (min-width: 400px) and (max-width: 610px) {
   .items-foto {
     grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));

@@ -15,7 +15,7 @@
 }
 .profile__button-add:hover {
   transition: opacity .9s ease-out;
-  opacity: .6;
+  opacity: .8;
 }
 @media screen and (min-width: 400px) and (max-width: 610px) {
   .profile__button-add {

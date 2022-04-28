@@ -3,17 +3,12 @@
   width: 24px;
   height: 24px;
   background: none;
-  color: inherit;
   border: none;
-  font: inherit;
   cursor: pointer;
-  outline: inherit;
   display: flex;
   padding: 7px;
-  align-items: center;
   justify-content: center;
   border: 1px solid rgba(255, 255, 255, 1);
-  box-sizing: border-box;
   margin-left: 18px;
 }
 .container-name__button:hover {
