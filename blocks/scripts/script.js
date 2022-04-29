@@ -1,11 +1,25 @@
+// доступ к кнопкам
 const btnClose = document.querySelector('.popup__container-close');
 const btnEdit = document.querySelector('.container-name__button');
 const bodyWindow = document.querySelector('.page');
 const popupWrraper = document.querySelector('.popup');
+// доступ к форме
+const namePopupinput = document.querySelector('.popup-form__name');
+const namePopupDiscription = document.querySelector('.popup-form__discription');
+const btnSave = document.querySelector('.popup-form__save-btn');
+const form = document.querySelector('.popup-form');
+// доступ к HTML
+const userNamepage = document.querySelector('.container-name__title');
+const discriptionNamepage = document.querySelector('.info-user__discription');
 
+
+// Функция которая открывает окно и присваивает значения имени и описания
 function popupOpenToggle() {
-  popupWrraper.classList.add('popup_opened');
+ popupWrraper.classList.add('popup_opened');
+ namePopupinput.value =  userNamepage.textContent;
+ namePopupDiscription.value = discriptionNamepage.textContent;
 }
+// функция на закрытие окна, которая добавляет класс к popup
 function popupCloseToggle() {
   popupWrraper.classList.remove('popup_opened');
 }
@@ -22,18 +36,7 @@ function popupOverleyclick(evt) {
 popupWrraper.addEventListener('click', popupOverleyclick);
 
 
-
-// доступ к форме
-const namePopupinput = document.querySelector('.popup-form__name');
-const namePopupDiscription = document.querySelector('.popup-form__discription');
-const btnSave = document.querySelector('.popup-form__save-btn');
-const form = document.querySelector('.popup-form');
-
-// доступ к HTML
-const userNamepage = document.querySelector('.container-name__title');
-const discriptionNamepage = document.querySelector('.info-user__discription');
-
-
+// Событие которое меняет описание и имя из popup
 function formSubmitHandler (evt) {
   evt.preventDefault();
   userNamepage.textContent = namePopupinput.value
@@ -41,3 +44,6 @@ function formSubmitHandler (evt) {
   popupCloseToggle()
 }
 form.addEventListener('submit', formSubmitHandler);
+
+
+
