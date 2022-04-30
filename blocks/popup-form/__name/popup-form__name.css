@@ -5,9 +5,13 @@
   border-bottom: 1px solid rgba(0, 0, 0, .2);
   width: 100%;
   padding-bottom: 13px;
-  box-sizing: border-box;
   font-family: inherit;
   font-weight: 400;
   font-size: 17px;
   line-height: 17px;
+}
+@media screen and (min-width: 320px) and (max-width: 450px) {
+  .popup-form__name {
+    font-size: 14px;
+  }
 }
