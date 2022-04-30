@@ -15,18 +15,18 @@
     <main class="content">
       <section class="profile">
         <div class="info-user">
-          <img class="info-user__imag" src="./images/my-foto.jpeg" alt="" />
+          <img class="info-user__imag" src="./images/my-foto.jpeg" alt="Фото пользователя" />
           <div class="info-user__container">
             <div class="container-name">
               <h1 class="container-name__title">Новик Дмитрий</h1>
-              <button class="container-name__button">
+              <button class="container-name__button" type="button">
 
               </button>
             </div>
-            <p class="info-user__discription">Исследователь CSS JS :)</p>
+            <p class="info-user__discription">Исследователь CSS JS</p>
           </div>
         </div>
-        <button class="profile__button-add">
+        <button class="profile__button-add" type="button">
           <img class="profile__icon" src="./images/plus.svg" alt="кнопка добавления картинки">
         </button>
       </section>
@@ -34,87 +34,87 @@
         <div class="card">
           <img
             src="./images/masceranno.jpeg"
-            alt="фото"
+            alt="Я и футболист"
             class="card__imag"
           />
           <div class="card__name">
             <h2 class="card__name-title">Хавьер Маскерано</h2>
-            <button class="card__name-heart"></button>
+            <button class="card__name-heart" type="button"></button>
           </div>
         </div>
         <div class="card">
           <img
             src="./images/my-foto.jpeg"
-            alt="фото"
+            alt="Я и Юлия"
             class="card__imag"
           />
           <div class="card__name">
             <h2 class="card__name-title">Я и Юльчик</h2>
-            <button class="card__name-heart"></button>
+            <button class="card__name-heart" type="button"></button>
           </div>
         </div>
         <div class="card">
           <img
             src="./images/Tihon.jpeg"
-            alt="фото"
+            alt="Кот Тихон"
             class="card__imag"
           />
           <div class="card__name">
-            <h2 class="card__name-title">Тихон и Шанель)</h2>
-            <button class="card__name-heart"></button>
+            <h2 class="card__name-title">Тихон и Шанель</h2>
+            <button class="card__name-heart" type="button"></button>
           </div>
         </div>
         <div class="card">
           <img
             src="./images/Habib.jpeg"
-            alt="фото"
+            alt="Я и Хабиб Нурмагомедов"
             class="card__imag"
           />
           <div class="card__name">
             <h2 class="card__name-title">Хабиб Чемпион</h2>
-            <button class="card__name-heart"></button>
+            <button class="card__name-heart" type="button"></button>
           </div>
         </div>
         <div class="card">
           <img
             src="./images/and-my.jpeg"
-            alt="фото"
+            alt="Я на море в очках"
             class="card__imag"
           />
           <div class="card__name">
             <h2 class="card__name-title">где-то на море</h2>
-            <button class="card__name-heart"></button>
+            <button class="card__name-heart" type="button"></button>
           </div>
         </div>
         <div class="card">
           <img
             src="./images/foto2.jpeg"
-            alt="фото"
+            alt="Я и Юлия в Краснодаре"
             class="card__imag"
           />
           <div class="card__name">
             <h2 class="card__name-title">Пара</h2>
-            <button class="card__name-heart"></button>
+            <button class="card__name-heart" type="button"></button>
           </div>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <p class="footer__copyright">&#169; 2020 Mesto Russia</p>
+      <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
     <div class="popup">
       <div class="popup__container">
-        <button class="popup__container-close">
+        <button class="popup__container-close" type="button">
 
         </button>
-        <form action="submit" class="popup-form">
-          <p class="popup-form__title">Редактировать профиль</p>
+        <h3 class="popup-form__title">Редактировать профиль</h3>
+        <form action="submit" name="form-popup" class="popup-form">
           <input class="popup-form__name" type="text" placeholder="Имя" required name="popup-form__name-text" />
           <input class="popup-form__discription" placeholder="О себе" type="text" name="popup-form__discription-text"/>
           <button class="popup-form__save-btn" type="submit">Сохранить</button>
         </form>
       </div>
     </div>
-    <script src="./blocks/scripts/script.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
