@@ -1,14 +1,14 @@
 // доступ к кнопкам
 const btnClose = document.querySelector('.popup__container-close');
-const btnEdit = document.querySelector('.container-name__button');
+const btnEdit = document.querySelector('.profile__info-button');
 const popupWrraper = document.querySelector('.popup');
 // доступ к форме
 const namePopupinput = document.querySelector('.popup-form__name');
 const namePopupDiscription = document.querySelector('.popup-form__discription');
 const form = document.querySelector('.popup-form');
 // доступ к HTML
-const userNamepage = document.querySelector('.container-name__title');
-const discriptionNamepage = document.querySelector('.info-user__discription');
+const userNamepage = document.querySelector('.profile__info-title');
+const discriptionNamepage = document.querySelector('.profile__discription');
 // Функция которая открывает окно и присваивает значения имени и описания
 function popupOpenToggle() {
  popupWrraper.classList.add('popup_opened');
