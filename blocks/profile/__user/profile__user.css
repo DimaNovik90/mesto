@@ -1,22 +1,22 @@
-.info-user {
+.profile__user {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 @media screen and (min-width: 320px) and (max-width: 400px) {
-  .info-user {
+  .profile__user {
     width: 100%;
     flex-direction: column;
 
 }
 }
 @media screen and (min-width: 401px) and (max-width: 600px) {
-  .info-user {
+  .profile__user {
     flex-direction: column;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 670px) {
-  .info-user {
+  .profile__user {
     width: 100%;
     justify-content: space-between;
     padding-bottom: 35px;

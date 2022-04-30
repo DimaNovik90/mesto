@@ -1,4 +1,4 @@
-.info-user__container {
+.profile__container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -6,8 +6,8 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .info-user__container {
+  .profile__container {
     padding: 22px 0 36px 0;
-
+    align-items: center;
   }
 }
