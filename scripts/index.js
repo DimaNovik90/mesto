@@ -3,9 +3,9 @@ const btnClose = document.querySelector('.popup__container-close');
 const btnEdit = document.querySelector('.profile__info-button');
 const popupWrraper = document.querySelector('.popup');
 // доступ к форме
-const namePopupinput = document.querySelector('.popup-form__name');
-const namePopupDiscription = document.querySelector('.popup-form__discription');
-const form = document.querySelector('.popup-form');
+const namePopupinput = document.querySelector('.popup__form-input_name');
+const namePopupDiscription = document.querySelector('.popup__form-input_discription');
+const form = document.querySelector('.popup__form');
 // доступ к HTML
 const userNamepage = document.querySelector('.profile__info-title');
 const discriptionNamepage = document.querySelector('.profile__discription');

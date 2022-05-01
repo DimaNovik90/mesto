@@ -25,8 +25,7 @@
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__container-close/popup__container-close.css);
-@import url(../blocks/popup-form/__title/popup-form__title.css);
-@import url(../blocks/popup-form/__name/popup-form__name.css);
-@import url(../blocks/popup-form/__discription/popup-form__discription.css);
-@import url(../blocks/popup-form/__save-btn/popup-form__save-btn.css);
+@import url(../blocks/popup/__title/popup__title.css);
+@import url(../blocks/popup/__form-input/popup__form-input.css);
+@import url(../blocks/popup/__form-save-btn/popup__form-save-btn.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
