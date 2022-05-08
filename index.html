@@ -31,79 +31,17 @@
         </button>
       </section>
       <section class="items-foto">
-        <div class="card">
-          <img
-            src="./images/masceranno.jpeg"
-            alt="Я и футболист"
-            class="card__imag"
-          />
-          <div class="card__name">
-            <h2 class="card__name-title">Хавьер Маскерано</h2>
-            <button class="card__name-heart" type="button"></button>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./images/my-foto.jpeg"
-            alt="Я и Юлия"
-            class="card__imag"
-          />
-          <div class="card__name">
-            <h2 class="card__name-title">Я и Юльчик</h2>
-            <button class="card__name-heart" type="button"></button>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./images/Tihon.jpeg"
-            alt="Кот Тихон"
-            class="card__imag"
-          />
-          <div class="card__name">
-            <h2 class="card__name-title">Тихон и Шанель</h2>
-            <button class="card__name-heart" type="button"></button>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./images/Habib.jpeg"
-            alt="Я и Хабиб Нурмагомедов"
-            class="card__imag"
-          />
-          <div class="card__name">
-            <h2 class="card__name-title">Хабиб Чемпион</h2>
-            <button class="card__name-heart" type="button"></button>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./images/and-my.jpeg"
-            alt="Я на море в очках"
-            class="card__imag"
-          />
-          <div class="card__name">
-            <h2 class="card__name-title">где-то на море</h2>
-            <button class="card__name-heart" type="button"></button>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./images/foto2.jpeg"
-            alt="Я и Юлия в Краснодаре"
-            class="card__imag"
-          />
-          <div class="card__name">
-            <h2 class="card__name-title">Пара</h2>
-            <button class="card__name-heart" type="button"></button>
-          </div>
-        </div>
+
+
+
+
       </section>
     </main>
     <footer class="footer">
       <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
-
-    <div class="popup">
+    <!-- popup изменения данных пользователя -->
+    <div class="popup popup_edit">
       <div class="popup__container">
         <button class="popup__container-close" type="button">
 
@@ -116,6 +54,35 @@
         </form>
       </div>
     </div>
+    <!-- popup добавления карточек -->
+    <div class="popup popup_add">
+      <div class="popup__container">
+        <button class="popup__container-close" type="button">
+
+        </button>
+        <h3 class="popup__title">Новое место</h3>
+        <form class="popup__wrapper-form" action="submit" name="form-popup">
+          <input class="popup__form-input popup__form-input_type_text" type="text" placeholder="Название" required name="popup-form__name-text" />
+          <input class="popup__form-input popup__form-input_type_link" placeholder="Ссылка на картинку" type="text" name="popup-form__discription-link"/>
+          <button type="submit" class="popup__form-save-btn">Создать</button>
+        </form>
+      </div>
+    </div>
+    <template class="template">
+      <div class="card">
+        <button class="card__button-remove" type:="button"></button>
+        <img
+          src="./images/masceranno.jpeg"
+          alt="Я и футболист"
+          class="card__imag"
+        />
+        <div class="card__name">
+          <h2 class="card__name-title">Хавьер Маскерано</h2>
+          <button class="card__name-heart" type="button"></button>
+        </div>
+      </div>
+    </template>
+    <script src="./scripts/items-card.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>

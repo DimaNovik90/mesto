@@ -1,0 +1,4 @@
+.card__like {
+  background-image: url(../../../images/like-black.svg);
+  transition: .9s ease-out;
+}
