@@ -139,6 +139,11 @@ initialCards.forEach(({ name, link }) => {
   cardImag.addEventListener("click", titlePopupImg);
 });
 
+
+
+
+
+
 function popupHandlerAddCard(evt) {
   evt.preventDefault();
   const initialElementCard = templateContent.cloneNode(true);
@@ -149,6 +154,7 @@ function popupHandlerAddCard(evt) {
   const cardImag = initialElementCard.querySelector(".card__imag");
   cardTitle.textContent = popupEditInputText.value;
   cardLink.src = popupEditInputLink.value;
+  cardLink.alt = cardTitle.textContent;
   itemsContainer.prepend(initialElementCard);
   evt.target.reset();
   handlerClosePopup();
