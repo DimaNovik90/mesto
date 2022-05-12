@@ -1,0 +1,22 @@
+.popup__btn-close {
+  width: 32px;
+  height: 32px;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  position: absolute;
+  left: 825px;
+  top: -40px;
+  background-image: url(../../../images/Close-Icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.popup__btn-close:hover {
+  opacity: 0.6;
+  transition: opacity 0.8s ease-in-out;
+}

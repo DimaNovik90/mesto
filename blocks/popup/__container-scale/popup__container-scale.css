@@ -1,0 +1,5 @@
+.popup__container-scale {
+  max-width: 856px;
+  display: flex;
+  position: relative;
+}
