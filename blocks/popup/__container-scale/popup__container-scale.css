@@ -3,3 +3,29 @@
   display: flex;
   position: relative;
 }
+@media screen and (min-width: 320px) and (max-width: 400px) {
+  .popup__container-scale {
+    max-width: 240px;
+    min-height: 299px;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 500px) {
+  .popup__container-scale {
+    max-width: 360px;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 600px) {
+  .popup__container-scale {
+    max-width: 470px;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 700px) {
+  .popup__container-scale {
+    max-width: 560px;
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 846px) {
+  .popup__container-scale {
+    max-width: 666px;
+  }
+}
