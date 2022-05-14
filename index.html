@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./pages/index.css" />
     <title>Социальная сеть Mesto</title>
-    <meta name="description" content="Социальная сеть Mesto создана в замен с ушедщего Instagram с России. ">
+    <meta
+      name="description"
+      content="Социальная сеть Mesto создана в замен с ушедщего Instagram с России. "
+    />
   </head>
   <body class="page">
     <header class="header">
@@ -15,23 +18,28 @@
     <main class="content">
       <section class="profile">
         <div class="profile__user">
-          <img class="profile__user-imag" src="./images/my-foto.jpeg" alt="Фото пользователя" />
+          <img
+            class="profile__user-imag"
+            src="./images/my-foto.jpeg"
+            alt="Фото пользователя"
+          />
           <div class="profile__container">
             <div class="profile__info">
               <h1 class="profile__info-title">Новик Дмитрий</h1>
-              <button class="profile__info-button" type="button">
-
-              </button>
+              <button class="profile__info-button" type="button"></button>
             </div>
             <p class="profile__discription">Исследователь CSS JS</p>
           </div>
         </div>
         <button class="profile__button-add" type="button">
-          <img class="profile__icon" src="./images/plus.svg" alt="кнопка добавления картинки">
+          <img
+            class="profile__icon"
+            src="./images/plus.svg"
+            alt="кнопка добавления картинки"
+          />
         </button>
       </section>
       <section class="items-foto">
-
 
       </section>
     </main>
@@ -41,13 +49,22 @@
     <!-- popup изменения данных пользователя -->
     <div class="popup popup_edit">
       <div class="popup__container">
-        <button class="popup__container-close" type="button">
-
-        </button>
+        <button class="popup__container-close" type="button"></button>
         <h3 class="popup__title">Редактировать профиль</h3>
         <form class="popup__form" action="submit" name="form-popup">
-          <input class="popup__form-input popup__form-input_type_name" type="text" placeholder="Имя" required name="popup-form__name-text" />
-          <input class="popup__form-input popup__form-input_type_discription" placeholder="О себе" type="text" name="popup-form__discription-text"/>
+          <input
+            class="popup__form-input popup__form-input_type_name"
+            type="text"
+            placeholder="Имя"
+            required
+            name="popup-form__name-text"
+          />
+          <input
+            class="popup__form-input popup__form-input_type_discription"
+            placeholder="О себе"
+            type="text"
+            name="popup-form__discription-text"
+          />
           <button type="submit" class="popup__form-save-btn">Сохранить</button>
         </form>
       </div>
@@ -55,13 +72,22 @@
     <!-- popup добавления карточек -->
     <div class="popup popup_add">
       <div class="popup__container">
-        <button class="popup__container-close" type="button">
-
-        </button>
+        <button class="popup__container-close" type="button"></button>
         <h3 class="popup__title">Новое место</h3>
         <form class="popup__wrapper-form" action="submit" name="form-popup">
-          <input class="popup__form-input popup__form-input_type_text" type="text" placeholder="Название" required name="popup-form__name-text" />
-          <input class="popup__form-input popup__form-input_type_link" placeholder="Ссылка на картинку" type="text" name="popup-form__discription-link"/>
+          <input
+            class="popup__form-input popup__form-input_type_text"
+            type="text"
+            placeholder="Название"
+            required
+            name="popup-form__name-text"
+          />
+          <input
+            class="popup__form-input popup__form-input_type_link"
+            placeholder="Ссылка на картинку"
+            type="text"
+            name="popup-form__discription-link"
+          />
           <button type="submit" class="popup__form-save-btn">Создать</button>
         </form>
       </div>
@@ -70,12 +96,14 @@
 
     <div class="popup popup_scale-foto">
       <div class="popup__container-scale">
-        <button class="popup__btn-close" type="button">
-
-        </button>
+        <button class="popup__btn-close" type="button"></button>
 
         <figure class="popup__figure">
-          <img class="popup__figure-img" src="./images/gorniy-Altai.png" alt="">
+          <img
+            class="popup__figure-img"
+            src="./images/gorniy-Altai.png"
+            alt=""
+          />
           <figcaption class="popup__figire-title"></figcaption>
         </figure>
       </div>
@@ -92,7 +120,11 @@
         <div class="card__name">
           <h2 class="card__name-title">Хавьер Маскерано</h2>
           <button class="card__name-heart" type="button">
-            <img class="card__name-icon" src="./images/VectorHeart1.svg" alt="">
+            <img
+              class="card__name-icon"
+              src="./images/VectorHeart1.svg"
+              alt=""
+            />
           </button>
         </div>
       </div>

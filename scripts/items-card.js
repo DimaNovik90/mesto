@@ -118,7 +118,7 @@ btnClosePopupImg.addEventListener('click', () => {
 })
 
 // ------------------
-// Функция вывода карточек на страницу
+// Функция создания карточек на страницу
 function createCard (item) {
   const name = item.name;
   const link = item.link;
@@ -133,18 +133,18 @@ function createCard (item) {
   nameCard.textContent = name;
   imgCard.src = link;
   imgCard.alt = name;
-  containerCardItems.append(templates);
+  containerCardItems.prepend(templates);
 }
 // ------------------
 // Функция создания карточек
-function AddCardHandler(evt) {
+function formCardHandler(evt) {
   evt.preventDefault();
   createCard({link: linkNewCard.value, name: nameNewCard.value});
   closePopup(formEditCart);
   evt.target.reset();
 }
 // ------------------
-formHandlerAddCard.addEventListener("submit", AddCardHandler);
+formHandlerAddCard.addEventListener("submit", formCardHandler);
 
 // const templates = document.querySelector('.template').content.querySelector('.card').cloneNode(true);
 // ----
