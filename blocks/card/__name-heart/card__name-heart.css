@@ -9,12 +9,4 @@
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
-  background-image: url(../../../images/heart.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
-
-/* .card__name-heart:hover {
-  background-image: url(../../../images/heart-opcty.svg);
-  transition: .9s ease-out;
-} */
