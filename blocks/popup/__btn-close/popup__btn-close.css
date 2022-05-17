@@ -21,7 +21,7 @@
   transition: opacity 0.8s ease-in-out;
 }
 
-@media screen and (min-width: 320px) and (max-width: 400px) {
+@media screen and (min-width: 320px) and (max-width: 720px) {
   .popup__btn-close {
     right: -2px;
     top: -28px;
@@ -29,4 +29,5 @@
     height: 20px;
   }
 }
+
 
