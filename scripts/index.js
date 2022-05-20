@@ -74,7 +74,7 @@ function closePopup(popupElement) {
   popupElement.classList.remove("popup_opened");
 }
 
-function openPropfilePopup(popupElement) {
+function openPropfilePopup() {
   settingNameDescription();
   openPopup(popapUser);
 }
