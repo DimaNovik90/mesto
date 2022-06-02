@@ -40,4 +40,4 @@
 @import url(../blocks/popup/__figure/__figire-title/popup__figire-title.css);
 @import url(../blocks/popup/__text-error/popup__text-error.css);
 @import url(../blocks/popup/__form-save-btn/_disabled/popup__form-save-btn_disabled.css);
-
+@import url(../blocks/popup/__input-error/popup__input-error.css);
