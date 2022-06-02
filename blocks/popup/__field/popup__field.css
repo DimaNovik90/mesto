@@ -1,0 +1,3 @@
+.popup__field:nth-child(odd) {
+  margin-top: 30px;
+}

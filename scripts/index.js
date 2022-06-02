@@ -28,6 +28,7 @@ const templates = document.querySelector(".template").content;
 const nameTitle = document.querySelector(".profile__info-title");
 const profileDescription = document.querySelector(".profile__discription");
 const containerCardItems = document.querySelector(".items-foto");
+const popupAll = document.querySelector('.popup');
 const initialCards = [
   {
     name: "Архыз",
@@ -68,10 +69,12 @@ initialCards.forEach((item) => {
 // Универсальная функции для откр/закр popup
 function openPopup(popupElement) {
   popupElement.classList.add("popup_opened");
+  document.addEventListener('keydown', handlerClosePopupEsc);
 }
 
 function closePopup(popupElement) {
   popupElement.classList.remove("popup_opened");
+  document.removeEventListener('keydown', handlerClosePopupEsc);
 }
 
 function openPropfilePopup() {
@@ -138,6 +141,21 @@ function btnOpenPopupImg(evt) {
   openPopup(popupOpenImag);
 }
 
+// закрытие модального окна по Esc
+function handlerClosePopupEsc(evt) {
+  if (evt.key === "Escape") {
+    const openedPopup = document.querySelector('.popup_opened');
+    closePopup(openedPopup);
+  }
+}
+
+// закрытие окна при клике на оверлей
+function closePopupClickOverlay(evt) {
+  if(evt.target === evt.currentTarget) {
+    closePopup(evt.target);
+  }
+}
+
 
 formAddingNewPlace.addEventListener("submit", formCardHandler);
 
@@ -156,9 +174,14 @@ formUserInfo.addEventListener("submit", changeNameForm);
 // ------------------
 // сдушатели событий открытия формы для добавления карточек
 btnEditCart.addEventListener("click", () => {
-  openPopup(popUpEditCart);
+    openPopup(popUpEditCart);
 });
 
 btnCloseEditCard.addEventListener("click", () => {
   closePopup(popUpEditCart);
 });
+// слушателя закрытия окна при клике на оверлей
+popUpEditCart.addEventListener("mousedown", closePopupClickOverlay);
+popupOpenImag.addEventListener("mousedown", closePopupClickOverlay);
+popapUser.addEventListener("mousedown", closePopupClickOverlay);
+
