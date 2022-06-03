@@ -22,6 +22,7 @@ const btnCloseEditCard = popUpEditCart.querySelector(".popup__container-close");
 const formAddingNewPlace = popUpEditCart.querySelector(".popup__wrapper-form");
 const nameNewCard = popUpEditCart.querySelector(".popup__form-input_type_text");
 const linkNewCard = popUpEditCart.querySelector(".popup__form-input_type_link");
+const btnSavePopup = popUpEditCart.querySelector(".popup__form-save-btn");
 // ------------------
 const templates = document.querySelector(".template").content;
 // данные пользователя на странице html
@@ -130,8 +131,13 @@ function formCardHandler(evt) {
   evt.preventDefault();
   const newCard = createCard({link: linkNewCard.value, name: nameNewCard.value,});
   renderCard(newCard);
+  btnNoActiv();
   closePopup(popUpEditCart);
   evt.target.reset();
+}
+function btnNoActiv () {
+  btnSavePopup.disabled = true;
+  btnSavePopup.classList.add('popup__form-save-btn_disabled');
 }
 // ------------------
 function btnOpenPopupImg(evt) {
