@@ -37,17 +37,18 @@ const hasInvalidInput = (inputList) => {
 
 const toggleButtonState = (inputList, buttonElement, inactiveButtonClass) => {
   if (hasInvalidInput(inputList)) {
-    btnNoActiv(); // вызываю здесь и убираю частичное дублирование функции !
+    disableSubmitButton(buttonElement, inactiveButtonClass); // вызываю здесь и убираю частичное дублирование функции !
   } else {
     buttonElement.classList.remove(inactiveButtonClass);
     buttonElement.removeAttribute("disabled");
   }
 };
 //Функция которая делает кнопку добавления новой карточки при повторном открытии не активной! И убирает частичное дублирование функции
-function btnNoActiv() {
-  btnSavePopup.disabled = true;
-  btnSavePopup.classList.add("popup__form-save-btn_disabled");
-}
+function disableSubmitButton(buttonElement, inactiveButtonClass) {
+  buttonElement.setAttribute('disabled', true);
+  buttonElement.classList.add(inactiveButtonClass);
+};
+
 
 const setEventListeners = (formElement, inputSelector, submitButtonSelector, inactiveButtonClass, inputErrorClass, errorClass) => {
   const inputList = Array.from(formElement.querySelectorAll(`.${inputSelector}`));
@@ -71,5 +72,4 @@ const enableValidation = ({
     setEventListeners(formElement,inputSelector,submitButtonSelector,inactiveButtonClass,inputErrorClass,errorClass);
   });
 };
-
 enableValidation(config);

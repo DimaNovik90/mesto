@@ -29,6 +29,7 @@ const templates = document.querySelector(".template").content;
 const nameTitle = document.querySelector(".profile__info-title");
 const profileDescription = document.querySelector(".profile__discription");
 const containerCardItems = document.querySelector(".items-foto");
+
 const initialCards = [
   {
     name: "Архыз",
@@ -137,9 +138,9 @@ function formCardHandler(evt) {
   evt.preventDefault();
   const newCard = createCard({link: linkNewCard.value, name: nameNewCard.value,});
   renderCard(newCard);
-  btnNoActiv(); // вызываю из validate.js
   closePopup(popUpEditCart);
   evt.target.reset();
+  disableSubmitButton(btnSavePopup, config.inactiveButtonClass)// вызываю из validate.js
 }
 
 
