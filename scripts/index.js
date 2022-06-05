@@ -29,7 +29,6 @@ const templates = document.querySelector(".template").content;
 const nameTitle = document.querySelector(".profile__info-title");
 const profileDescription = document.querySelector(".profile__discription");
 const containerCardItems = document.querySelector(".items-foto");
-const popupAll = document.querySelector('.popup');
 const initialCards = [
   {
     name: "Архыз",
@@ -66,16 +65,18 @@ initialCards.forEach((item) => {
   const card = createCard(item);
   renderCard(card);
 });
+
 // ------------------
+
 // Универсальная функции для откр/закр popup
 function openPopup(popupElement) {
   popupElement.classList.add("popup_opened");
-  document.addEventListener('keydown', handlerClosePopupEsc);
+  document.addEventListener("keydown", handlerClosePopupEsc);
 }
 
 function closePopup(popupElement) {
   popupElement.classList.remove("popup_opened");
-  document.removeEventListener('keydown', handlerClosePopupEsc);
+  document.removeEventListener("keydown", handlerClosePopupEsc);
 }
 
 function openPropfilePopup() {
@@ -88,7 +89,9 @@ function settingNameDescription() {
   nameUser.value = nameTitle.textContent;
   discriptionUser.value = profileDescription.textContent;
 }
+
 // ------------------
+
 // Изменения данных имени пользователя из формы
 function changeNameForm(evt) {
   evt.preventDefault();
@@ -96,8 +99,11 @@ function changeNameForm(evt) {
   profileDescription.textContent = discriptionUser.value;
   closePopup(popapUser);
 }
+
 // ------------------
+
 // ------------------
+
 function buttonAddingLike(evt) {
   evt.target.classList.toggle("card__like");
 }
@@ -131,15 +137,14 @@ function formCardHandler(evt) {
   evt.preventDefault();
   const newCard = createCard({link: linkNewCard.value, name: nameNewCard.value,});
   renderCard(newCard);
-  btnNoActiv();
+  btnNoActiv(); // вызываю из validate.js
   closePopup(popUpEditCart);
   evt.target.reset();
 }
-function btnNoActiv () {
-  btnSavePopup.disabled = true;
-  btnSavePopup.classList.add('popup__form-save-btn_disabled');
-}
+
+
 // ------------------
+
 function btnOpenPopupImg(evt) {
   imgPopup.src = evt.target.src;
   figcaptionImg.textContent = evt.target.alt;
@@ -148,46 +153,49 @@ function btnOpenPopupImg(evt) {
 }
 
 // закрытие модального окна по Esc
+
 function handlerClosePopupEsc(evt) {
   if (evt.key === "Escape") {
-    const openedPopup = document.querySelector('.popup_opened');
+    const openedPopup = document.querySelector(".popup_opened");
     closePopup(openedPopup);
   }
 }
 
 // закрытие окна при клике на оверлей
+
 function closePopupClickOverlay(evt) {
-  if(evt.target === evt.currentTarget) {
+  if (evt.target === evt.currentTarget) {
     closePopup(evt.target);
   }
 }
 
-
 formAddingNewPlace.addEventListener("submit", formCardHandler);
-
 btnClosePopupImg.addEventListener("click", () => {
   closePopup(popupOpenImag);
 });
-// Слушатели событий для открытия формы редактирования данных
-btnInfoUser.addEventListener('click', openPropfilePopup);
 
+// Слушатели событий для открытия формы редактирования данных
+
+btnInfoUser.addEventListener("click", openPropfilePopup);
 btnCloseFormUser.addEventListener("click", function (evt) {
   closePopup(popapUser);
 });
+
 // слушатели событий удаления. лайка. открытия попап с картинкой.
 
 formUserInfo.addEventListener("submit", changeNameForm);
 // ------------------
-// сдушатели событий открытия формы для добавления карточек
-btnEditCart.addEventListener("click", () => {
-    openPopup(popUpEditCart);
-});
 
+// сдушатели событий открытия формы для добавления карточек
+
+btnEditCart.addEventListener("click", () => {
+  openPopup(popUpEditCart);
+});
 btnCloseEditCard.addEventListener("click", () => {
   closePopup(popUpEditCart);
 });
+
 // слушателя закрытия окна при клике на оверлей
 popUpEditCart.addEventListener("mousedown", closePopupClickOverlay);
 popupOpenImag.addEventListener("mousedown", closePopupClickOverlay);
 popapUser.addEventListener("mousedown", closePopupClickOverlay);
-
