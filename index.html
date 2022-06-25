@@ -52,7 +52,7 @@
       <div class="popup__container">
         <button class="popup__container-close" type="button"></button>
         <h3 class="popup__title">Редактировать профиль</h3>
-        <form class="popup__form" action="submit" name="form-popup" novalidate>
+        <form class="popup__form popup__form-profile" action="submit" name="form-profile" novalidate>
           <label class="popup__field">
             <input
               class="popup__form-input popup__form-input_type_name"
@@ -86,12 +86,7 @@
       <div class="popup__container">
         <button class="popup__container-close" type="button"></button>
         <h3 class="popup__title">Новое место</h3>
-        <form
-          class="popup__wrapper-form popup__form"
-          action="submit"
-          name="form-popup"
-          novalidate
-        >
+        <form class="popup__wrapper-form popup__form " action="submit" name="form-place" novalidate>
           <label class="popup__field">
             <input
               class="popup__form-input popup__form-input_type_text"
@@ -138,7 +133,7 @@
       <div class="card">
         <button class="card__button-remove" type="button"></button>
         <img
-          src="./images/masceranno.jpeg"
+          src=""
           alt="Я и футболист"
           class="card__imag"
         />
@@ -154,7 +149,8 @@
         </div>
       </div>
     </template>
-    <script src="./scripts/index.js"></script>
-    <script src="./scripts/validate.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
+    <!-- <script src="./scripts/Card.js"></script>
+    <script src="./scripts/validate.js"></script> -->
   </body>
 </html>
