@@ -1,17 +1,19 @@
-import { initialCards, validationConfig } from './constans.js';
-import FormValidator from './validate.js';
-import Card from './Card.js';
+import { initialCards, validationConfig } from "./constans.js";
+import FormValidator from "./FormValidator.js";
+import Card from "./Card.js";
 // кнопка редактирования данных
 const btnInfoUser = document.querySelector(".profile__info-button");
 const templateSelector = ".template";
 // ------------------
-const popupEditFormProfile = document.querySelector('.popup__form-profile');
+const popupEditFormProfile = document.querySelector(".popup__form-profile");
 // форма пользователя
 const popapUser = document.querySelector(".popup_edit");
 const btnCloseFormUser = popapUser.querySelector(".popup__container-close");
 const formUserInfo = popapUser.querySelector(".popup__form");
 const nameUser = popapUser.querySelector(".popup__form-input_type_name");
-const discriptionUser = popapUser.querySelector(".popup__form-input_type_discription");
+const discriptionUser = popapUser.querySelector(
+  ".popup__form-input_type_discription"
+);
 const btnSaveFormUser = popapUser.querySelector(".popup__form-save-btn");
 // ------------------
 // доступы к попап открытия картинки
@@ -34,7 +36,7 @@ const templates = document.querySelector(".template").content;
 const nameTitle = document.querySelector(".profile__info-title");
 const profileDescription = document.querySelector(".profile__discription");
 const containerCardItems = document.querySelector(".items-foto");
-// ------------------
+
 // Универсальная функции для откр/закр popup
 function openPopup(popupElement) {
   popupElement.classList.add("popup_opened");
@@ -46,43 +48,31 @@ function closePopup(popupElement) {
   document.removeEventListener("keydown", handlerClosePopupEsc);
 }
 
-// ------------------
 // отображение имени и описания
 function settingNameDescription() {
   nameUser.value = nameTitle.textContent;
   discriptionUser.value = profileDescription.textContent;
 }
 
-// ------------------
-
 // Изменения данных имени пользователя из формы
-function changeNameForm(evt) {
+function submitEditProfileForm(evt) {
   evt.preventDefault();
   nameTitle.textContent = nameUser.value;
   profileDescription.textContent = discriptionUser.value;
   closePopup(popapUser);
 }
 
-// ------------------
-function  btnOpenPopupImg(data) {
-  const {name, link} = data;
+function openImagePopup(data) {
+  const { name, link } = data;
   imgPopup.src = link;
   figcaptionImg.textContent = name;
   imgPopup.alt = name;
   openPopup(popupOpenImag);
 }
-// ------------------
 
-// function buttonAddingLike(evt) {
-//   evt.target.classList.toggle("card__like");
-// }
-
-// function btnDeletHandler(evt) {
-//   evt.target.closest(".card").remove();
-// }
 // Функция создания карточек
 function createCard(data) {
-  const card = new Card(data, templateSelector, btnOpenPopupImg);
+  const card = new Card(data, templateSelector, openImagePopup);
   const cardElement = card.generateCard();
   return cardElement;
 }
@@ -94,13 +84,13 @@ function renderCard(cardElement) {
 
 // добавление карточек в index
 initialCards.forEach((item) => {
- renderCard(createCard(item));
-})
+  renderCard(createCard(item));
+});
 
 // Функция создания карточек из формы
-function formCardHandler(evt) {
+function submitAddCardForm(evt) {
   evt.preventDefault();
-  const card = createCard({name: nameNewCard.value, link: linkNewCard.value})
+  const card = createCard({ name: nameNewCard.value, link: linkNewCard.value });
   renderCard(card);
   closePopup(popUpEditCart);
 }
@@ -123,28 +113,28 @@ function closePopupClickOverlay(evt) {
 }
 
 // поиск форм для валидации
-  const formValidators = {};
-   Array.from(document.forms).forEach((formElement) => {
-    formValidators[formElement.name] = new FormValidator(validationConfig, formElement);
-    formValidators[formElement.name].enableValidation();
-   })
+const formValidators = {};
+Array.from(document.forms).forEach((formElement) => {
+  formValidators[formElement.name] = new FormValidator(
+    validationConfig,
+    formElement
+  );
+  formValidators[formElement.name].enableValidation();
+});
 
+function openPropfilePopup() {
+  settingNameDescription();
+  formValidators[popupEditFormProfile.name].cleanUpForm();
+  openPopup(popapUser);
+}
 
-   function openPropfilePopup() {
-    settingNameDescription();
-    formValidators[popupEditFormProfile.name].cleanUpForm();
-    openPopup(popapUser);
-  }
-
-
-
-formAddingNewPlace.addEventListener("submit", formCardHandler);
+formAddingNewPlace.addEventListener("submit", submitAddCardForm);
 
 btnClosePopupImg.addEventListener("click", () => {
   closePopup(popupOpenImag);
 });
-// Слушатели событий для открытия формы редактирования данных
 
+// Слушатели событий для открытия формы редактирования данных
 btnInfoUser.addEventListener("click", openPropfilePopup);
 btnCloseFormUser.addEventListener("click", function (evt) {
   closePopup(popapUser);
@@ -152,7 +142,7 @@ btnCloseFormUser.addEventListener("click", function (evt) {
 
 // слушатели событий удаления. лайка. открытия попап с картинкой.
 
-formUserInfo.addEventListener("submit", changeNameForm);
+formUserInfo.addEventListener("submit", submitEditProfileForm);
 // ------------------
 
 // сдушатели событий открытия формы для добавления карточек
@@ -162,6 +152,7 @@ btnEditCart.addEventListener("click", () => {
   formValidators[formAddingNewPlace.name].cleanUpForm();
   openPopup(popUpEditCart);
 });
+
 btnCloseEditCard.addEventListener("click", () => {
   closePopup(popUpEditCart);
 });
@@ -170,4 +161,3 @@ btnCloseEditCard.addEventListener("click", () => {
 popUpEditCart.addEventListener("mousedown", closePopupClickOverlay);
 popupOpenImag.addEventListener("mousedown", closePopupClickOverlay);
 popapUser.addEventListener("mousedown", closePopupClickOverlay);
-
